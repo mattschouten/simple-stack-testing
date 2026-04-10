@@ -19,23 +19,15 @@ terraform {
 
 provider "local" {}
 
-resource "time_static" "static_timestamp" {}
+module "manifest" {
+  source = "./modules/manifest-module"
 
-resource "local_file" "manifest" {
-  content  = "Manifest file created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}"
-  filename = "${var.environment_parent_directory}/${var.target_environment}/manifest.txt"
+  environment_parent_directory = var.environment_parent_directory
 }
 
-resource "random_pet" "pet" {
-  count  = var.pet_count
-  length = 3
-}
+module "pets" {
+  source = "./modules/pet-module"
 
-resource "local_file" "pets" {
-
-  for_each = { for pet in random_pet.pet : pet.id => pet }
-  #   count   = var.pet_count
-
-  filename = "${var.environment_parent_directory}/${var.target_environment}/pets/${each.key}"
-  content  = "${var.target_environment}: ${var.environment_parent_directory}/dev/${each.key}"
+  pet_count                    = var.pet_count
+  environment_parent_directory = var.environment_parent_directory
 }

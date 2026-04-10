@@ -1,9 +1,9 @@
 output "files_per_environment" {
   description = "Number of files created per environment (pets + manifest)"
-  value       = "random_pet.count + 1"
+  value       = length(module.pets.pet_names) + 1
 }
 
-output "some_pets" {
-  description = "Debug stuff:  pet data structure"
-  value       = random_pet.pet
+output "pets_created" {
+  description = "Names of pet files created"
+  value       = module.pets.pet_names
 }
