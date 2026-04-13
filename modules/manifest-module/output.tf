@@ -3,7 +3,7 @@ output "static_timestamp" {
   value       = time_static.static_timestamp.rfc3339
 }
 
-output "m_manifest_filename" {
+output "manifest_filename" {
   description = "Filename for manifest file"
   value       = local_file.manifest.filename
 }
@@ -18,7 +18,7 @@ output "sim_manifest_filename" {
   value       = time_static.static_timestamp.rfc3339
 }
 
-output "sim_manifest_timestamp" {
+output "sim_manifest_contents" {
   description = "Contents that would be put in manifest file"
   value       = "Manifest file created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}"
 }
