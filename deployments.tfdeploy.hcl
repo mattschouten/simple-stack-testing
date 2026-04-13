@@ -5,5 +5,5 @@ deployment "test" {
     pet_count                    = 3
   }
 
-destroy = true
+  destroy = true
 }
