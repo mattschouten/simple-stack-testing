@@ -1,13 +1,14 @@
 required_providers {
+  random = {
+    source  = "hashicorp/random"
+    version = "~> 3.8.1"
+  }
+
   time = {
     source  = "hashicorp/time"
     version = "~> 0.13.1"
   }
 
-  random = {
-    source  = "hashicorp/random"
-    version = "~> 3.8.1"
-  }
 }
 
 provider "time" "this" {}
@@ -21,7 +22,7 @@ component "manifest" {
   }
 
   providers = {
-    time  = provider.time.this
+    time = provider.time.this
   }
 }
 
