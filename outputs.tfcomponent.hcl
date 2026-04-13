@@ -16,9 +16,9 @@ output "manifest_filename" {
   type        = string
 }
 
-output "manifest_timestamp" {
+output "manifest_contents" {
   description = "Contents of manifest file"
-  value       = component.manifest.contents
+  value       = component.manifest.sim_manifest_contents
   type        = string
 }
 
