@@ -24,6 +24,6 @@ output "manifest_timestamp" {
 
 output "all_files" {
   description = "What the filesystem could look like"
-  value       = concat(component.manifest.sim_manifest_filename, component.pets.pet_filenames)
+  value       = concat([component.manifest.sim_manifest_filename], component.pets.pet_filenames)
   type        = list(string)
 }
