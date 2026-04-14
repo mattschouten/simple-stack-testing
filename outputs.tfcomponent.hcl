@@ -4,26 +4,26 @@ output "files_per_environment" {
   type        = number
 }
 
-output "pets_created" {
+output "pet_files_created" {
   description = "Names of pet files created"
-  value       = component.pets.pet_names
+  value       = component.pets.pet_filenames
   type        = list(string)
 }
 
 output "manifest_filename" {
   description = "Manifest filename"
-  value       = component.manifest.sim_manifest_filename
+  value       = component.manifest.manifest_filename
   type        = string
 }
 
 output "manifest_contents" {
   description = "Contents of manifest file"
-  value       = component.manifest.sim_manifest_contents
+  value       = component.manifest.manifest_contents
   type        = string
 }
 
 output "all_files" {
-  description = "What the filesystem could look like"
-  value       = concat([component.manifest.sim_manifest_filename], component.pets.pet_filenames)
+  description = "What the filesystem would look like"
+  value       = concat([component.manifest.filename], component.pets.pet_filenames)
   type        = list(string)
 }
