@@ -1,13 +1,13 @@
 variable "environment_parent_directory" {
   description = "Parent directory environment directories are placed within"
   type        = string
-  default     = "my_environments"
+  default     = "ROOT"
 }
 
 variable "target_environment" {
-  description = "Environment to deploy - bridge to Stacks"
+  description = "Environment to deploy"
   type        = string
-  default     = "dev"
+  default     = "unknown_env"
 }
 
 variable "pet_count" {
