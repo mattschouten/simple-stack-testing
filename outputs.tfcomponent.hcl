@@ -24,6 +24,6 @@ output "manifest_contents" {
 
 output "all_files" {
   description = "What the filesystem would look like"
-  value       = concat([component.manifest.filename], component.pets.pet_filenames)
+  value       = concat([component.manifest.manifest_filename], component.pets.pet_filenames)
   type        = list(string)
 }
