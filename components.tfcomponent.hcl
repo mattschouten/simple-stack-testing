@@ -41,6 +41,7 @@ component "pets" {
   }
 
   providers = {
+    local  = provider.local.this
     random = provider.random.this
   }
 }
