@@ -4,4 +4,5 @@ deployment "test" {
     target_environment           = "test"
     pet_count                    = 4
   }
+  destroy = true
 }
