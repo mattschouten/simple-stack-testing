@@ -7,11 +7,11 @@ variable "environment_parent_directory" {
 variable "target_environment" {
   description = "Environment to deploy - bridge to Stacks"
   type        = string
-  default     = "dev"
+  default     = "DEFAULT_TARGET"
 }
 
 variable "pet_count" {
   description = "Number of pets to create"
   type        = number
-  default     = 3
+  default     = 1
 }
