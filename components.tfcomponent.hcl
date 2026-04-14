@@ -1,9 +1,4 @@
 required_providers {
-  local = {
-    source  = "hashicorp/local"
-    version = "~> 2.8.0"
-  }
-
   random = {
     source  = "hashicorp/random"
     version = "~> 3.8.1"
@@ -15,7 +10,6 @@ required_providers {
   }
 }
 
-provider "local" "this" {}
 provider "time" "this" {}
 provider "random" "this" {}
 
@@ -27,7 +21,6 @@ component "manifest" {
   }
 
   providers = {
-    local = provider.local.this
     time  = provider.time.this
   }
 }
@@ -41,7 +34,6 @@ component "pets" {
   }
 
   providers = {
-    local  = provider.local.this
     random = provider.random.this
   }
 }
