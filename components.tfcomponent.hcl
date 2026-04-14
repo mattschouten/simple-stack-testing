@@ -18,10 +18,11 @@ component "manifest" {
 
   inputs = {
     environment_parent_directory = var.environment_parent_directory
+    target_environment           = context.deployment_name
   }
 
   providers = {
-    time  = provider.time.this
+    time = provider.time.this
   }
 }
 
@@ -31,6 +32,7 @@ component "pets" {
   inputs = {
     pet_count                    = var.pet_count
     environment_parent_directory = var.environment_parent_directory
+    target_environment           = context.deployment_name
   }
 
   providers = {
