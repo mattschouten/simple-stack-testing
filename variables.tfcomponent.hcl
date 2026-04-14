@@ -1,7 +1,7 @@
 variable "environment_parent_directory" {
   description = "Parent directory environment directories are placed within"
   type        = string
-  default     = "my_environments"
+  default     = "stacks_tutorial"
 }
 
 variable "target_environment" {
