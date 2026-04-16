@@ -10,5 +10,5 @@ output "manifest_filename" {
 
 output "manifest_contents" {
   description = "Contents of manifest file"
-  value = "Manifest file created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}:  manifest.txt plus ${length(var.additional_files)} additional files"
+  value = "Manifest file originally created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}:  manifest.txt plus ${length(var.additional_files)} additional files"
 }
