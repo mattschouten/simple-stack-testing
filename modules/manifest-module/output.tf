@@ -5,7 +5,7 @@ output "manifest_timestamp" {
 
 output "manifest_filename" {
   description = "Filename of manifest file"
-  value       = "${var.environment_parent_directory}/${var.target_environment}/manifest.txt"
+  value       = "${var.parent_directory}/${var.environment_name}/manifest.txt"
 }
 
 output "manifest_contents" {

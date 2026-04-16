@@ -17,8 +17,8 @@ component "manifest" {
   source = "./modules/manifest-module"
 
   inputs = {
-    environment_parent_directory = var.environment_parent_directory
-    target_environment           = var.target_environment
+    parent_directory = var.parent_directory
+    environment_name = var.environment_name
   }
 
   providers = {
@@ -30,9 +30,9 @@ component "pets" {
   source = "./modules/pet-module"
 
   inputs = {
-    pet_count                    = var.pet_count
-    environment_parent_directory = var.environment_parent_directory
-    target_environment           = var.target_environment
+    pet_count        = var.pet_count
+    parent_directory = var.parent_directory
+    environment_name = var.environment_name
   }
 
   providers = {
