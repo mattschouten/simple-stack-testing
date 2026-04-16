@@ -4,12 +4,6 @@ output "files_per_environment" {
   type        = number
 }
 
-output "pet_files_created" {
-  description = "Names of pet files created"
-  value       = component.pets.pet_filenames
-  type        = list(string)
-}
-
 output "manifest_filename" {
   description = "Manifest filename"
   value       = component.manifest.manifest_filename
