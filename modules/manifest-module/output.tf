@@ -10,10 +10,5 @@ output "manifest_filename" {
 
 output "manifest_contents" {
   description = "Contents of manifest file"
-  value = join("\n",
-    concat(
-      ["Manifest file created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}:"],
-      [for file in var.additional_files : " - ${file}"]
-    )
-  )
+  value = "Manifest file created by Terraform Stacks Tutorial at ${time_static.static_timestamp.rfc3339}:  ${length(var.additional_files)} additional files"
 }
