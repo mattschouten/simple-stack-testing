@@ -1,9 +1,3 @@
-output "files_per_environment" {
-  description = "Number of files created per environment (pets + manifest)"
-  value       = length(component.pets.pet_names) + 1
-  type        = number
-}
-
 output "manifest_filename" {
   description = "Manifest filename"
   value       = component.manifest.manifest_filename
@@ -16,7 +10,7 @@ output "manifest_contents" {
   type        = string
 }
 
-output "all_files" {
+output "the_filesystem" {
   description = "What the filesystem would look like"
   value       = concat([component.manifest.manifest_filename], component.pets.pet_filenames)
   type        = list(string)
