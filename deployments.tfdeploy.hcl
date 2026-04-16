@@ -11,3 +11,11 @@ deployment "dev" {
     pet_count        = 2
   }
 }
+
+deployment "prod" {
+  inputs = {
+    environment_name = "dev"
+    pet_count        = 2
+    parent_directory = "non_default_directory"
+  }
+}
