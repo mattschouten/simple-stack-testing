@@ -9,3 +9,9 @@ variable "environment_name" {
   type        = string
   default     = "unknown_env"
 }
+
+variable "additional_files" {
+  description = "Additional files beyond the manifest"
+  type        = list(string)
+  default     = []
+}
