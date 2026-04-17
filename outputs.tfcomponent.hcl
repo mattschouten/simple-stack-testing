@@ -9,3 +9,9 @@ output "manifest_contents" {
   value       = component.manifest.manifest_contents
   type        = string
 }
+
+output "simulated_filesystem" {
+  description = "What the filesystem would look like"
+  value       = concat([component.manifest.manifest_filename], component.pets.pet_filenames)
+  type        = list(string)
+}
