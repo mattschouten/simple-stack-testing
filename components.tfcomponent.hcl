@@ -19,7 +19,6 @@ component "manifest" {
   inputs = {
     parent_directory = var.parent_directory
     environment_name = var.environment_name
-    additional_files = component.pets.pet_filenames
   }
 
   providers = {
@@ -27,15 +26,9 @@ component "manifest" {
   }
 }
 
-component "pets" {
+removed {
   source = "./modules/pet-module"
-
-  inputs = {
-    pet_count        = var.pet_count
-    parent_directory = var.parent_directory
-    environment_name = var.environment_name
-  }
-
+  from = component.pets
   providers = {
     random = provider.random.this
   }
