@@ -25,11 +25,3 @@ component "manifest" {
     time = provider.time.this
   }
 }
-
-removed {
-  source = "./modules/pet-module"
-  from = component.pets
-  providers = {
-    random = provider.random.this
-  }
-}

@@ -3,7 +3,7 @@ deployment "test" {
     environment_name = "test"
     pet_count        = 4
   }
-  destroy = false
+  destroy = true
 }
 
 deployment "dev" {
@@ -19,5 +19,5 @@ deployment "prod" {
     pet_count        = 2
     parent_directory = "non_default_directory"
   }
-  destroy = false
+  destroy = true
 }
