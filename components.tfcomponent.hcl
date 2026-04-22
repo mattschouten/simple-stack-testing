@@ -1,9 +1,4 @@
 required_providers {
-  random = {
-    source  = "hashicorp/random"
-    version = "~> 3.8.1"
-  }
-
   time = {
     source  = "hashicorp/time"
     version = "~> 0.13.1"
@@ -11,7 +6,6 @@ required_providers {
 }
 
 provider "time" "this" {}
-provider "random" "this" {}
 
 component "manifest" {
   source = "./modules/manifest-module"
