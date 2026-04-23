@@ -5,13 +5,7 @@ variable "parent_directory" {
 }
 
 variable "environment_name" {
-  description = "Environment to deploy into"
+  description = "Environment to deploy"
   type        = string
   default     = "DEFAULT_TARGET"
-}
-
-variable "pet_count" {
-  description = "Number of pets to create"
-  type        = number
-  default     = 1
 }
