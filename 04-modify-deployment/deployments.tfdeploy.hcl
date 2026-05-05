@@ -1,6 +1,7 @@
 deployment "dev" {
   inputs = {
     environment_name = "dev"
+    parent_directory = "non_default_directory"
   }
 }
 
@@ -15,6 +16,5 @@ deployment "prod" {
   inputs = {
     environment_name = "prod"
     pet_count        = 2
-    parent_directory = "non_default_directory"
   }
 }
